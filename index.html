@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>読書メモ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <!-- 入力フォーム -->
+    <section class="card form">
+      <h1>📖 読書メモ</h1>
+
+      <label for="title">本のタイトル</label>
+      <input type="text" id="title" placeholder="嫌われる勇気">
+
+      <label for="memo">メモ・感想</label>
+      <textarea id="memo" rows="4" placeholder="印象に残ったことを書く"></textarea>
+
+      <p id="error" class="error"></p>
+      <button id="saveBtn" class="btn-primary">保存する</button>
+    </section>
+
+    <!-- 一覧 -->
+    <section>
+      <div class="list-header">
+        <h2>保存したメモ（<span id="count">0</span>件）</h2>
+        <button id="clearBtn" class="btn-text">すべて削除</button>
+      </div>
+      <ul id="list" class="list"></ul>
+      <p id="empty" class="empty">まだメモがありません。最初の1冊を登録しましょう。</p>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
